@@ -4,15 +4,16 @@ const bodyParser = require("body-parser");
 
 app.use(bodyParser("json/urlencoded"));
 
-app.get("/helloworld", (req, res) => {
+app.get("/", (req, res) => {
     console.log("-> get /helloworld");
     return res.send("Hola Mundo");
 })
 
-app.post("/", (req, res) => {
+
+app.post("/events-subscriber-verification", (req, res) => {
     console.log("-> post /");
     console.log("body: ", req.body);
     return res.send(req.body.challenge);
-})
+});
 
 module.exports = app;
