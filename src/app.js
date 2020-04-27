@@ -6,7 +6,7 @@ app.use(bodyParser("json/urlencoded"));
 
 app.get("/helloworld", (req, res) => {
     console.log("-> get /helloworld");
-    res.send("Hola Mundo");
+    return res.send("Hola Mundo");
 })
 
 app.post("/", (req, res) => {
